@@ -23,3 +23,7 @@ def cli(cliArr):
             parsed.append(x)
             
     return parsed
+
+# Help Commands
+def help_msg(key):
+    return f"Use '{key} --help' or '{key} -h' to see the help message"

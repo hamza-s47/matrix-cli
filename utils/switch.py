@@ -33,21 +33,21 @@ def Aggregate(key, arr, arr2=None, axis=None, method=1):
     return agg_dict.get(key, f"'{key}' does not exist.")
 
 # ARITHMETIC
-def Arithmetic(key, arr1, arr2=None, k=None):
+def Arithmetic(key, arr1, arr2=None):
     arth=arithmetic.MatrixArithmetic(arr1, arr2)
     
     arth_dict={
         "add":arth.addition(),
         "divide":arth.division(),
         "elementMul":arth.multiplication(),
-        "exponential":arth.exp(),
+        "exp":arth.exp(),
         "dot":arth.dot_product(),
         "linear":arth.lin_sys(),
         "sqrt":arth.sqrt(),
         "sin":arth.sin(),
         "cos":arth.cos(),
         "log":arth.log(),
-        "scalarMul":arth.s_multiplication(k),
+        "scalarMul":arth.s_multiplication(arr2),
         "subtract":arth.subtraction(),
     }
     return arth_dict.get(key, f"'{key}' does not exist.")

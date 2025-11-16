@@ -31,6 +31,13 @@ help_commands={
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} cum_prod [[1,2], [3,4],...,[n,n,...,n]] 0 {Style.RESET_ALL}
         0 for column-wise (optional)
         1 for row-wise (optional)""",
+    # (Cummulative Sum)
+    "cum_sum":f"""To find Commulative Sum use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} cum_sum [[1,2], [3,4],...,[n,n,...,n]] {Style.RESET_ALL}
+        matrix -> [[1,2], [3,4],...,[n,n,...,n]]
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} cum_sum [[1,2], [3,4],...,[n,n,...,n]] 0 {Style.RESET_ALL}
+        0 for column-wise (optional)
+        1 for row-wise (optional)""",
     # (Max)
     "max":f"""To find Maximum value use:
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} max [[1,2], [3,4],...,[n,n,...,n]] {Style.RESET_ALL}
@@ -50,6 +57,13 @@ help_commands={
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} median [[1,2], [3,4],...,[n,n,...,n]] {Style.RESET_ALL}
         matrix -> [[1,2], [3,4],...,[n,n,...,n]]
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} median [[1,2], [3,4],...,[n,n,...,n]] 0 {Style.RESET_ALL}
+        0 for column-wise (optional)
+        1 for row-wise (optional)""",
+    # (Min)
+    "min":f"""To find Minimum value use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} min [[1,2], [3,4],...,[n,n,...,n]] {Style.RESET_ALL}
+        matrix -> [[1,2], [3,4],...,[n,n,...,n]]
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} min [[1,2], [3,4],...,[n,n,...,n]] 0 {Style.RESET_ALL}
         0 for column-wise (optional)
         1 for row-wise (optional)""",
     # (Product of Element)
@@ -89,6 +103,9 @@ help_commands={
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} add [[1,2], [3,4],...,[n,n]] [[5,6], [7,8],...,[n,n]] {Style.RESET_ALL}
         matrix 1 -> [[1,2], [3,4],...,[n,n]]
         matrix 2 -> [[5,6], [7,8],...,[n,n]]""",
+    # (Cos)
+    "cos":f"""For Cos use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} cos [[1,2], [3,4],...,[n,n]] {Style.RESET_ALL}""",
     # (Division)
     "divide":f"""To perform Matrix Division use:
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} divide [[1,2], [3,4],...,[n,n]] [[5,6], [7,8],...,[n,n]] {Style.RESET_ALL}
@@ -104,11 +121,28 @@ help_commands={
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} elementMul [[1,2], [3,4],...,[n,n]] [[5,6], [7,8],...,[n,n]] {Style.RESET_ALL}
         matrix 1 -> [[1,2], [3,4],...,[n,n]]
         matrix 2 -> [[5,6], [7,8],...,[n,n]]""",
+    # (Exponential)
+    "exp":f"""For Exponential use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} exp [[1,2], [3,4],...,[n,n]] {Style.RESET_ALL}""",
     # (Linear System)
     "linear":f"""To find Linear System use:
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} linear [[1,2], [3,4],...,[n,n]] [[5,6], [7,8],...,[n,n]] {Style.RESET_ALL}
         matrix 1 -> [[1,2], [3,4],...,[n,n]]
         matrix 2 -> [[5,6], [7,8],...,[n,n]]""",
+    # (Log)
+    "log":f"""For Log use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} log [[1,2], [3,4],...,[n,n]] {Style.RESET_ALL}""",
+    # (Scalar Multiplication)
+    "scalarMul":f"""To perform Scalar Multiplication use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} scalarMul [[1,2], [3,4],...,[n,n]] 3 {Style.RESET_ALL}
+        matrix -> [[1,2], [3,4],...,[n,n]]
+        scalar -> 3""",
+    # (Sin)
+    "sin":f"""For Sin use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} sin [[1,2], [3,4],...,[n,n]] {Style.RESET_ALL}""",
+    # (Square Root)
+    "sqrt":f"""For Square Root use:
+    {Fore.YELLOW+Back.GREEN+Style.BRIGHT} sqrt [[1,2], [3,4],...,[n,n]] {Style.RESET_ALL}""",
     # (Subtraction)
     "subtract":f"""To perform Matrix Subtraction use:
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} subtract [[1,2], [3,4],...,[n,n]] [[5,6], [7,8],...,[n,n]] {Style.RESET_ALL}
@@ -151,7 +185,7 @@ help_commands={
     "transpose":f"""To Transpose the Matrix use:
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} transpose [[1,2], [3,4],...,[n,n,...,n]] {Style.RESET_ALL}""",
     
-    # INSPECT
+    # INIT
     # (Array Range)
     "arr_range":f"""To initialize the Vector of Range:
     Range Vector (in this case its 0 t0 4)

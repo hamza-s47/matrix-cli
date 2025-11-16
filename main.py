@@ -12,5 +12,5 @@ n=3
 
 args=sys.argv[1:]
 
-# print(cli(args))
-print(help_commands["random"])
+print(cli(args))
+# print(help_commands["random"])
