@@ -269,3 +269,5 @@ help_commands={
     "summary":f"""For Summary use:
     {Fore.YELLOW+Back.GREEN+Style.BRIGHT} summary [[1,2], [3,4],...,[n,n,...,n]] {Style.RESET_ALL}""",
 }
+
+help_keys=["add", "arr_range", "constants", "corr_coef", "cos", "cum_prod", "cum_sum", "dataType", "det", "dimension", "divide", "dot", "elementMul", "exp", "eye", "flatten", "inv", "length", "linear", "linspace", "loadNpy", "loadTxt", "log", "magnitude", "max", "mean", "median", "min", "ones", "prod", "random", "rank", "ravel", "saveNpy", "saveTxt", "scalarMul", "shape", "sin", "size", "sort", "sqrt", "std", "subtract", "sum", "summary", "trace", "transpose", "var", "zeros"]

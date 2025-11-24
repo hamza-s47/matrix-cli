@@ -16,7 +16,7 @@ class Inspect:
                 "Size":self.arr.size,
             }
         except Exception as e:
-            return {"Error": str(e), help_msg("summary")}
+            return {"Error": str(e)+'\n'+ help_msg("summary")}
         
     # Data Type 
     def d_type(self):
@@ -52,7 +52,3 @@ class Inspect:
             return f"Size: {self.summary()['Size']}"
         except Exception as e:
             return f"Error while finding Size: {e} \n{help_msg('size')}"
-        
-    
-        
-        
