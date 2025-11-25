@@ -1,3 +1,4 @@
+from colorama import Fore, Back, Style, init
 import json
 # class CustomTools:
     
@@ -34,4 +35,5 @@ def cli(cliArr):
 
 # Help Commands
 def help_msg(key):
-    return f"Use '{key} --help' or '{key} -h' to see the help message\nDon't use spaces inside arrays when writing commands, they get split and cause errors"
+    return f"""{Fore.YELLOW+Style.BRIGHT}Use '{key} --help' for help{Style.RESET_ALL}
+{Fore.WHITE+Back.RED+Style.BRIGHT} Don't use spaces inside arrays when writing commands, they get split and cause errors {Style.RESET_ALL}"""

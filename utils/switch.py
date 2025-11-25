@@ -53,7 +53,7 @@ def Arithmetic(key, arr1, arr2=None):
     return arth_dict.get(key, f"'{key}' does not exist.")
 
 # FILE MANAGEMENT
-def file_sys(key, fileName, arr=None, d=None):
+def FileSys(key, fileName, arr=None, d=None):
     fileSys=files.FileSystem()
     
     fileSys_dict={

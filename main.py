@@ -1,13 +1,8 @@
 import sys
-# from colorama import Fore, Back, Style, init
+from colorama import Fore, Back, Style, init
 import utils.switch as method
-from utils.tools import cli, idx_overflow
+from utils.tools import cli
 from utils.help import help_commands, help_keys
-
-# mat1=[[1,2], [3,4]]
-# mat2=[[6,9], [7,8]]
-# vect=[1,2,4,3,7,5]
-# n=3
 
 args=sys.argv[1:]
 
@@ -16,12 +11,44 @@ if cli(args)[0] in ["--help", "-h"] and len(cli(args))==1:
         print(help_commands[x])
 elif cli(args)[0] in help_keys and cli(args)[1] in ["--help", "-h"] and len(cli(args))==2:
     print(help_commands[cli(args)[0]])
-elif cli(args)[0] in help_keys and len(cli(args))<=7:
-    if cli(args)[0] in ["d_type", "dimension", "length", "shape", "size", "summary"] and len(cli(args))==2:
-        print(method.Inspect(cli(args)[0], cli(args)[1]))
-    elif cli(args)[0] in ["flatten", "ravel", "sort", "transpose"] and 2<=len(cli(args))<=3:
-        if len(cli(args))==3:
-            print(method.Manip(cli(args)[0], cli(args)[1], cli(args)[2]))
-        print(method.Manip(cli(args)[0], cli(args)[1]))
+elif (cli(args)[0] in ["d_type", "dimension", "length", "shape", "size", "summary"]) and (len(cli(args))==2):
+    print(method.Inspect(cli(args)[0], cli(args)[1]))
+elif cli(args)[0] in ["flatten", "ravel", "sort", "transpose"] and 2<=len(cli(args))<=3:
+    if len(cli(args))==3:
+        print(method.Manip(cli(args)[0], cli(args)[1], cli(args)[2]))
+    print(method.Manip(cli(args)[0], cli(args)[1]))
+elif cli(args)[0] in ["det", "inv", "magnitude", "rank","trace"] and len(cli(args))==2:
+    print(method.Adv(cli(args)[0], cli(args)[1]))
+elif cli(args)[0] in ["loadNpy", "saveNpy", "loadTxt", "saveTxt"] and 2<=len(cli(args))<=4:
+    if len(cli(args))==3:
+        print(method.FileSys(cli(args)[0], cli(args)[1], cli(args)[2]))
+    if len(cli(args))==4:
+        print(method.FileSys(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3]))
+    print(method.FileSys(cli(args)[0], cli(args)[1]))
+elif cli(args)[0] in ["add", "divide", "elementMul", "exp", "dot", "linear", "sqrt", "sin", "cos", "log", "scalarMul", "subtract"] and 2<=len(cli(args))<=3:
+    if len(cli(args))==3:
+        print(method.Arithmetic(cli(args)[0], cli(args)[1], cli(args)[2]))
+    print(method.Arithmetic(cli(args)[0], cli(args)[1]))
+elif cli(args)[0] in ["corr_coef", "cum_prod", "cum_sum", "max", "mean", "median", "min", "prod", "sum", "var", "std"] and 2<=len(cli(args))<=5:
+    if len(cli(args))==3:
+        print(method.Aggregate(cli(args)[0], cli(args)[1], cli(args)[2]))
+    if len(cli(args))==4:
+        print(method.Aggregate(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3]))
+    if len(cli(args))==5:
+        print(method.Aggregate(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3], cli(args)[4]))
+    print(method.Aggregate(cli(args)[0], cli(args)[1]))
+elif cli(args)[0] in ["ones", "constants", "eye", "linspace", "random", "arr_range", "zeros"] and 2<=len(cli(args))<=7:
+    if len(cli(args))==3:
+        print(method.Init(cli(args)[0], cli(args)[1], cli(args)[2]))
+    if len(cli(args))==4:
+        print(method.Init(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3]))
+    if len(cli(args))==5:
+        print(method.Init(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3], cli(args)[4]))
+    if len(cli(args))==6:
+        print(method.Init(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3], cli(args)[4], cli(args)[5]))
+    if len(cli(args))==7:
+        print(method.Init(cli(args)[0], cli(args)[1], cli(args)[2], cli(args)[3], cli(args)[4], cli(args)[5], cli(args)[6]))
+    print(method.Init(cli(args)[0], cli(args)[1]))
+    
 else:
-    pass
+    print(f"{Fore.RED+Style.BRIGHT}There's some mistake in typing command, use: \n{Fore.YELLOW+Style.BRIGHT}main.py --help{Style.RESET_ALL}")
