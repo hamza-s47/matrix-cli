@@ -25,3 +25,6 @@ main.py command [options]
 ### **Show help:**
 main.py --help <br/>
 main.py command --help
+<br/><br/>
+## <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzNlN25pOXJpZWl2eDMwaTc3ZGowZWgzNDVjMm5zNHJscHY0bXF3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Xg4Lc2tzOXXdNCU4Qc/giphy.gif" width="80" >
+### The Matrix CLI is currently undergoing testing. All features and components are subject to refinement as the development process continues.
